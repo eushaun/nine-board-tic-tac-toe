@@ -86,7 +86,7 @@ For each of our AI's turn, we generate a new tree with the current board state a
 The search depth varies as the game progresses. It will start at depth 3, slowly incrementing to depths 4, 5 and 6.
 
 The heuristic function is defined as the probability that player wins - probability opponent wins for each board. For each consecutive X's without any O's in any row/column/diagonal, X's score increases depending on how many X's are in that row/column/diag.  
-Eg: in board 1, if a row/column/diagonal has only one X and no O, then Pr(X wins) += 1. But if there's two X, then Pr(X wins) += 10, and Pr(X wins) += 100 if three X as we want the agent to either move towards that board or completely avoid it if it is the opponent's score. We then sum up the probability for each of the boards.
+Eg: in board 1, if a row/column/diagonal has only one X and no O, then `Pr(X wins) += 1`. But if there's two X, then `Pr(X wins) += 10`, and `Pr(X wins) += 100` if three X as we want the agent to either move towards that board or completely avoid it if it is the opponent's score. We then sum up the probability for each of the boards.
 
 ### To-do
 1. Use python dictionaries to store heuristic values of each node at the start of the game.
