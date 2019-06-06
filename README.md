@@ -90,5 +90,5 @@ The heuristic function is defined as the probability that player wins - probabil
 Eg: in board 1, if a row/column/diagonal has only one X and no O, then `Pr(X wins) += 1`. But if there's two X, then `Pr(X wins) += 10`, and `Pr(X wins) += 100` if three X as we want the agent to either move towards that board or completely avoid it if it is the opponent's score. We then sum up the probability for each of the boards.
 
 ### To-do
-1. Use python dictionaries to store heuristic values of each node at the start of the game.
+1. Use python dictionaries to store heuristic values of each possible combination of the board at the start of the game. This should speed up the computations considerably as we do not need to calculate the heuristics at every turn.  
 2. Think of better heuristic, current one is kinda simplistic.
